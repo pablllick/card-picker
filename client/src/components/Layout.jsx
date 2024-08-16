@@ -13,9 +13,7 @@ function Layout() {
         </Col>
       </Row>
       <Row>
-        <Col>
-          <Outlet />
-        </Col>
+        <Outlet />
       </Row>
     </Container>
   );
