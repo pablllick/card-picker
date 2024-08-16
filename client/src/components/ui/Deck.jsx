@@ -1,9 +1,9 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
-function Deck({ data }) {
+function Deck({ data, handlerChooseDeck }) {
   return (
-    <Card style={{ width: '18rem' }}>
+    <Card style={{ width: '18rem' }} onClick={() => handlerChooseDeck(data.id)}>
       {/* <Card.Img variant="top" src="holder.js/100px180" /> */}
       <Card.Body>
         <Card.Title>{data.name}</Card.Title>
