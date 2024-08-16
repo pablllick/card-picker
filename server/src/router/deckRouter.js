@@ -12,17 +12,17 @@ router.route('/').get(async (req, res) => {
   }
 });
 
-router.route('/:deckId').get(async (req, res) => {
+router.route('/:deckID').get(async (req, res) => {
   try {
-    const { deckId } = req.params;
+    const { deckID } = req.params;
     const cards = await Card.findAll({
-      where: { deckId },
-      attributes: ['id', 'question', 'answer', 'deckId'],
-    });
-    if (cards) {
+        where: { deckID },
+        attributes: ['id', 'question', 'answer', 'deckID'],
+      });
+    if (!cards) {
       return res.sendStatus(404);
     }
-    return res.status(200).json();
+    return res.status(200).json(cards);
   } catch (error) {
     console.log(error);
     return res.sendStatus(500);
