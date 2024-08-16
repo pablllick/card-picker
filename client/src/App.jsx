@@ -1,4 +1,3 @@
-import Deck from './components/ui/Deck';
 import Layout from './components/Layout';
 import Decks from './components/pages/Decks';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';

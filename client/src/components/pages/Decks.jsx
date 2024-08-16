@@ -6,13 +6,12 @@ function BasicExample() {
   useEffect(() => {
     fetch('/api/deck')
       .then((data) => data.json())
-      .then(setDecks)
-      .then(console.log)
+      .then((data) => setDecks(data));
   }, []);
   return (
     <>
-      {decks.map((deck) => {
-        <Deck data={deck} />;
+      {decks.map((data) => {
+        <Deck data={data} />;
       })}
     </>
   );
