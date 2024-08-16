@@ -84,7 +84,7 @@ module.exports = {
           deckID: 3,
         },
         {
-          question: 'Котики? (Да/Нет)',
+          question: 'Котики 😼? (Да/Нет)',
           answer: 'Да',
           deckID: 3,
         },
